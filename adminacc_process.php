@@ -21,7 +21,7 @@ if(isset($_POST['update'])){
 		
 			$sql = "SELECT * FROM admininfo WHERE username='$username' and password='$password'" ;
 			
-			$result = mysqli_query($sql);
+			$result = mysqli_query($con, $sql);
 			
 			if(mysqli_num_rows($result)==0){
 				echo "Invalid username and password";
